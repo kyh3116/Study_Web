@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body onload="func()">
+<p onmousedown="this.style.backgroundColor='red'" onmouseup="this.style.backgroundColor='blue'">안녕하시구리</p>
+
+<p id="a">정말 하기 싫지만 이것도 연습한다. 꼭 이러면 나오더라 제대로 해보자 용훈아.</p>
+
+<script>
+	var s;
+	function func(){
+		s = document.getElementById("a");
+		s.onmouseover=over;
+		s.onmouseout=out;
+	}
+	function over(){
+		s.style.backgroundColor="black";
+		alert(event.type);
+	}
+	function out(){
+		s.style.backgroundColor="green";
+		alert(event.type);
+	}
+	function noAction(e) {
+		e.preventDefault(); // 이벤트의 디폴트 행동 강제취소
+	}
+	document.oncontextmenu = fff;
+	function fff(){
+		alert("안대")
+		return false;
+	}
+
+</script>
+<button onclick="ee()">이벤트 객체 전달 받기 실패 </button>
+<form>
+<input type="checkbox">빵(체크 됨)<br>
+<input type="checkbox" onclick="noAction(event)">술(체크 안됨)
+</form>
+
+
+
+
+온포커스랑 온브루어<input type="text" onfocus="llll()" onblur="lll()">
+<script>
+	function lll(){
+		alert("잘 입력하지 못하면 큰일난다.");
+	}
+	function llll(){
+		
+	}
+
+</script>
+
+
+
+
+
+</body>
+</html>

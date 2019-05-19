@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<input type="radio" name="r1" value="bus">버스
+<input type="radio" name="r1" value="car">자동차
+<input type="radio" name="r1" value="train">기차
+<input type="button" onclick="con()" value="뭐 눌렀는지 맞춰볼게.">
+
+<hr>
+<form>
+	<input type="checkbox" name="hat" value="10000" onclick="charge(this)">모자
+	<input type="checkbox" name="shose" value="30000" onclick="charge(this)">신발
+	<input type="checkbox" name="bag" value="80000" onclick="charge(this)">가방<br>
+	<input type="text" id="c" value="0">
+</form>
+<script>
+	function charge(n){
+		var sum = 0;
+		if (n.checked) {
+			sum += parseInt(n.value);
+		}
+		else{
+			sum -= parseInt(n.value);
+		}
+		document.getElementById("c").value = sum;
+	}
+
+
+
+
+
+
+	var ra = document.getElementsByName("r1");
+	function con(){
+		if (ra[0].checked) {
+			alert("버스이다.");
+		}
+		else if (ra[1].checked) {alert("자동차이다.");}
+		else if (ra[2].checked) {alert("기차이다.");}
+		else{
+			alert("선택 하고 눌러 바부탱.");
+		}
+	}
+	
+</script>
+</body>
+</html>

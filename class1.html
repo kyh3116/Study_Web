@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>자바스크립트 해보자</title>
+<meta charset="utf-8">
+<style>
+	
+input[type=text]{
+	color: red;
+}
+input[type=text]:hover{
+	background-color: black;
+}
+input[type=text]:focus{
+	font-size: 150%;
+}
+div{
+	border: 2px solid black;
+}
+div.d0{
+	width: 500px;
+	height: 500px;
+}
+div.d1{
+	display: inline;
+	width: 100px;
+	height: 100px;
+}
+div.d2{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+}
+div.d3{
+	display: block;
+	width: 100px;
+	height: 100px;
+}
+div.d4{
+	width: 50px;
+	height: 50px;
+}
+
+div#header{
+	width: 100%;
+	height: 200px;
+	float: top;
+}
+div#content{
+	width: 1000px;
+	height: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+div#nav{
+	width: 1000px;
+	height: 100px;
+	margin-right: auto;
+	margin-left: auto;
+}
+div#footer{
+	clear: both;
+}
+ul.menu{
+	list-style: none;
+	display: block;
+
+}
+.menu li> a{
+	text-decoration: none;
+	color: black;
+	padding: 0 15px;
+	display: block;
+}
+/*.menu li{list-style: none; float: left; display: block;}*/
+.menu li{
+	/*display: block;*/
+	list-style: none;
+
+	float: left;
+	border: 2px solid black;
+	cursor: pointer;
+	
+}
+
+</style>
+
+</head>
+<body>
+<h3>첫 시도</h3>
+<hr>
+<div id="header">여기는 헤더</div>
+<div id="nav">여기는 윗메뉴
+	<ul class="menu">
+		<li><a href="#">메뉴를 만들어보자</a> </li>
+		<li><a href="#">메뉴를</a></li>
+		<li><a href="#">만들어보자</a> </li>
+		<li><a href="#">그럼</a></li>
+		<li><a href="#">시작합니다.</a></li>
+	</ul>
+</div>
+<div id="content">여기는 컨텐츠<br>
+
+이름 : <input type="text" name="" placeholder="플레이스홀더">
+<div class="d0">큰상자
+<div class="d1">인라인상자</div>
+<div class="d1">인라인</div>
+<div class="d2">인라인-블록</div>
+<div class="d3">블록</div>
+<div class="d2">인라인블록</div>
+<div class="d2">인라인블록</div>
+
+<details>
+	<summary>서머리 누르는거임</summary>
+	<p>p태그 내용</p>
+</details>
+<div class="d4">1</div>
+<div class="d4">2</div>
+<div class="d4">3</div>
+
+</div>
+<a href=""></a>
+<img src="1.jpg" width="100" height="100" alt="img" onmouseover="img(this)" onmouseout="out(this)">
+<script>
+function img(obj){
+	obj.src="2.jpg";
+}	
+function out(obj){
+	obj.src="3.jpg"
+}
+</script>
+
+<a href="javascript:alert('클릭하셨나요?')">클릭&nbsp&nbsp해보세요.</a>
+<script>
+document.write("<h3>Welcome!</h3>");
+document.write("2 + 5 는<br>");
+document.write("<mark>7 입니다.</mark><br>");
+</script>
+<script>
+	var a = prompt("이름입력하세요","홍실동?")
+	if (a==null) {
+		alert("왜 이름 없냐?");
+	}
+	else if (a=="") {
+		alert("싫으면 말고");
+	}
+	else {
+		alert(a+"님 "+"방가방가");
+	}
+	document.write(a+"<br>");
+	var b = confirm("이름 입력 하셨나요?");
+	document.write("입력 하셨냐는 물음에 : "+b);
+</script>
+
+
+</div>
+
+<div id="footer">여기는 바닥</div>
+
+</body>
+</html>

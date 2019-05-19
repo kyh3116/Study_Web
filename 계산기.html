@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<meta charset="utf-8">
+<script>
+	
+function func(){
+	var x = document.getElementById("x").value;
+	var y = document.getElementById("y").value;
+	var sum
+	sum = parseInt(x)+parseInt(y);
+	document.getElementById("sum").value = sum;
+
+
+}
+
+
+</script>
+
+</head>
+<body>
+
+첫 번째 정수 : <input id="x"><br>
+두 번째 정수 : <input id="y"><br>
+합계 : <input id="sum"><br>
+<button type="button" onclick="func()">계산</button>
+
+
+</body>
+</html>

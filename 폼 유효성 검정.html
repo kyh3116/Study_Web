@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+
+</head>
+<body>
+<script>
+	function sub(){
+		var n = document.getElementById("name");
+		if (n.value.length==0) {
+			alert("필드가 비었습니다.");
+			return false;
+		}
+		
+		var max = 8;
+		var min = 6;
+		var i = document.getElementById("username").value;
+		if (i.length>=min && i.length<=max){
+			
+		}
+		else{alert("아이디를 "+min+"자와 "+max+"자 사이로 입력해주세요.");
+			return false;
+		}
+		var ex = /^[0-9]+$/;
+		if (document.getElementById("phone").value.match(ex)) {
+			return true;
+		}
+		else{
+			alert("숫자만 입력하세요.");
+		}
+		
+	}
+
+</script>
+<form>
+	이름 : <input type="text" id="name"><br>
+	주소 : <input type="text" id="addr"><br>
+	생일 : <input type="date" id="birthday"><br>
+	아이디(6~8자) : <input type="text" id="username"><br>
+	이메일 : <input type="email" id="email"><br>
+	휴대폰 : <input type="tel" id="phone"><br>
+	<input type="submit" value="확인" onclick="sub()"><br>
+
+
+
+</form>
+
+</body>
+</html>

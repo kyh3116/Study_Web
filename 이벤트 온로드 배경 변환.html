@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body id="all" onload="call()">
+
+<script>
+	function call(){
+		alert("문서가 로드 되었습니다.");
+		document.getElementById("all").style.backgroundColor="yellow";
+	}
+	function changeRadio(c){
+		document.getElementById("all").style.backgroundColor=c;
+	}
+
+</script>
+<input type="radio" name="mm" value="c1" onclick="changeRadio('green')">초록
+<input type="radio" name="mm" value="c2" onclick="changeRadio('red')">빨강
+<input type="radio" name="mm" value="c3" onclick="changeRadio('blue')">파랑
+
+
+</body>
+</html>

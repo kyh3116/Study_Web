@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body onload="changeClolor()">
+
+<input type="button" value="열어보시게" onclick="window.open('http://www.naver.com','_blank','width=300,height=300', true)">
+<hr>
+<h3 id="a">색이 변하는건 정신이 없잖아 그러니깐</h3>
+<script>
+	var id;
+	// changeClolor()
+	function changeTextColor(){
+		var e = document.getElementById("a");
+		e.style.color=(e.style.color=="red")?"blue":"red";
+		e.style.backgroundColor=(e.style.backgroundColor=="green")?"yellow":"green";
+	}
+	function changeClolor(){
+		id = setInterval(changeTextColor,500);
+	}
+	function func(){
+		clearInterval(id);
+	}
+
+
+</script>
+<button type="button" onclick="func()">누르라구!!</button>
+</body>
+</html>

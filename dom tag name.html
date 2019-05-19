@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<meta charset="utf-8">
+<script>
+	
+
+</script>
+
+</head>
+<body>
+
+<ul>
+	<li>모라구 쓰지1</li>
+	<li>모라구 쓰지2</li>
+	<li>모라구 쓰지3</li>
+	<li>모라구 쓰지4</li>
+	<li>모라구 쓰지5</li>
+
+</ul>
+<input type="text" id="target" name="text1">
+<input type="submit" value="제출" onclick="process()">
+<script>
+	var ul = document.getElementsByTagName("ul")[0];
+	var allli = document.getElementsByTagName("li")[2];
+	alert(allli.innerHTML);
+	//allli 는 li 태그 단계임 그 안에 데이터를 불러오려면 innerHTML 을 쓰거나 그 아래 자식의 데이터를 불러와도 됨.
+	document.write(allli.firstChild.data);
+
+	function process(){
+		var o = document.getElementsByTagName("text1")
+	}
+</script>
+</body>
+</html>

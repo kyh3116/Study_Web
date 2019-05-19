@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+
+</head>
+<body>
+
+<form>
+	<select id="a" onchange="wh()">
+		<option value="1">바나나</option>
+		<option value="2" selected>딸기</option>
+		<option value="3">키위</option>
+	</select>
+<input type="button" onclick="wh()" value="누르">
+
+
+
+
+</form>
+<script>
+	function wh(){
+		var sel = document.getElementById("a");
+		var index = sel.selectedIndex;
+		alert(sel[index].innerHTML);
+	}
+
+</script>
+</body>
+</html>

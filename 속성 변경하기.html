@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<meta charset="utf-8">
+<script>
+	function func(){
+		var v = document.getElementById("image");
+		v.src="2.jpg";
+		var k = document.ddd.ccc;
+
+		k.value = "누르면 안됨";
+	}
+	function ffunc(){
+		document.getElementById("hhh").style.color="red";
+
+	}
+	function ffunc2(){
+		document.getElementById("hhh").style.visibility="hidden";
+
+	}
+	function ffunc3(){
+		document.getElementById("hhh").style.visibility="visible";
+
+	}
+</script>
+</head>
+<body>
+<img id="image" src="1.jpg">
+<form name="ddd">
+<input type="button" name="ccc" onclick="func()" value="누르셈">
+</form>
+<hr>
+<h3 id="hhh">색을 바꿀거야.</h3>
+<input type="button" value="누르면 바뀔거야" onclick="ffunc()">
+<input type="button" value="누르면 안보이게 될거야" onclick="ffunc2()">
+<input type="button" value="누르면 보이게 될거야" onclick="ffunc3()">
+
+</body>
+</html>
